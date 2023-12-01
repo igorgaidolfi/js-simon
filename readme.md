@@ -8,3 +8,7 @@ Consigli del giorno:
 * Pensate prima in italiano.
 * Dividete in piccoli problemi la consegna.
 * Individuate gli elementi di cui avete bisogno per realizzare il programma
+
+1) Creare una funzione che genera 5 numeri random
+2) Creare una funzione che dopo 30 secondi chiede all'utente l'inserimento dei 5 numeri
+3) Creare una funzione che da il punteggio del gioco

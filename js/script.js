@@ -5,5 +5,16 @@ function randomArrayGen(NUMBERS){
     }
     return array
 }
-const randNum = 5
-let randArr = randomArrayGen(randNum)
+
+setTimeout(function(){
+    const randNUM = 5
+    let randArr = randomArrayGen(randNUM)
+    let i = 0
+    let simonArr = []
+    while(i<randNUM){
+        let num = prompt(`Inserisci il ${i+1}o numero`)
+        simonArr.push(num)
+        i++
+    }
+    console.log(simonArr)
+}, 2000)
