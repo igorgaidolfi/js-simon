@@ -1,3 +1,4 @@
+// 1. FUNZIONE CHE GENERA UN ARRAY DI NUMERI CASUALI
 function randomArrayGen(NUMBERS){
     let array = []
     for(let i=0; i<NUMBERS; i++){
@@ -5,16 +6,29 @@ function randomArrayGen(NUMBERS){
     }
     return array
 }
-
+// 2. FUNZIONE CHE MOSTRA NELLA FINESTRA IL RISULTATO
+function SimonGame(array){
+    const result = document.getElementById('score')
+    let points = array.length
+    result.innerText = `Hai trovato in totale ${points} numeri. Ecco la lista dei numeri ${array}`
+}
+const randNUM = 5
+let randArr = randomArrayGen(randNUM)
+let result = document.getElementById('score')
+result.innerText = `${randArr}`
 setTimeout(function(){
-    const randNUM = 5
-    let randArr = randomArrayGen(randNUM)
+    result.innerText =""
+}, 950)
+// 3. FUNZIONE CHE CHIEDE ALL'UTENTE DI INSERIRE I NUMERI VISTI
+setTimeout(function(){
     let i = 0
     let simonArr = []
     while(i<randNUM){
-        let num = prompt(`Inserisci il ${i+1}o numero`)
-        simonArr.push(num)
+        let num = parseInt(prompt(`Inserisci il ${i+1}o numero`))
+        if(randArr.includes(num)){
+            simonArr.push(num)
+        }
         i++
     }
-    console.log(simonArr)
-}, 2000)
+    SimonGame(simonArr)
+}, 1000)
